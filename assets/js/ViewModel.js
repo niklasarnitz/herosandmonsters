@@ -68,6 +68,32 @@ class ViewModel {
     }
 
     getMonstersCondition() {
+	if(this.monsters.count < 1) {
+		return("")
+	} else {
+        	let string = ""
+        	for (let i = 0; i < this.monsters.length; i++) {
+        		string = string + i + " # " + this.monsters[i].getCondition() + "<br>"
+        	}
+        	return string
+	}
+    }
+
+    getMonstersLifepoints() {
+        let sum = 0
+        this.monsters.forEach(monster => {
+            sum = sum + monster.lifepoints
+        })
+
+        return ("Gesamte Monsterleben: " + sum)
+    }
+
+    getHerosLifepoints() {
+        let sum = 0
+        this.heros.forEach(hero => {
+            sum = sum + hero.lifepoints
+        })
+
         return ("Gesamte Heroleben: " + sum)
     }
 
