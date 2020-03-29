@@ -3,7 +3,6 @@ class ViewModel {
         this.round = 0
         this.heros = []
         this.monsters = []
-        this.battlefield = new Battlefield()
         this.monsterIndex = 0
         this.heroIndex = 0
         this.dice = new Dice()
