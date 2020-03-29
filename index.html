@@ -1,28 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/addons/p5.sound.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <meta charset="utf-8" />
-
+    <title>HEROGAME</title>
 </head>
 
 <body>
-    <script src="ViewController.js"></script>
-    <script src="View.js"></script>
-    <script src="ViewModel.js"></script>
-    <script src="Player.js"></script>
-    <script src="Battlefield.js"></script>
-    <script src="Dice.js"></script>
+    <script src="assets/js/StatefulViewController.js"></script>
+    <script src="assets/js/StatefulView.js"></script>
+    <script src="assets/js/ViewModel.js"></script>
+    <script src="assets/js/Player.js"></script>
+    <script src="assets/js/Battlefield.js"></script>
+    <script src="assets/js/Dice.js"></script>
 
     <h1>Herogame</h1>
     <h2 id="h2">Im weit entfernten land der helden und monster ist ein großer krieg ausgebrochen.<br>Kommandiere jetzt deine Helden in der schlacht gegen die bösen monster!</h2>
-
-    <div id="gameCanvas"></div>
 
     <script>
         let htmlElement = document.getElementById("h2")
@@ -35,5 +32,4 @@
     </script>
 
 </body>
-
 </html>

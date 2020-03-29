@@ -43,7 +43,7 @@ class View {
         // FightButton
         this.fightButton = createButton('Runde austragen');
         this.fightButton.id("fightButton")
-        this.fightButton.position(130, bottom + 370);
+        this.fightButton.position(width / 2, bottom + 370);
 
     }
 }

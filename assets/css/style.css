@@ -17,26 +17,18 @@ h2 {
     color: white
 }
 
-/*
-canvas {
-    display: block;
-}
-*/
-
 div {
     font-family: 'Source Code Pro', monospace;
 }
 
 #roundLabel {
     color: white;
-    text-align: left;
-    margin: 0 auto;
+    text-align: center;
 }
 
 #heroLifePointsLabel {
     color: white;
-    text-align: center;
-    margin: 0 auto;
+    text-align: left;
 }
 
 #herosConditionScrollBox {
@@ -47,7 +39,7 @@ div {
 
 #monstersLifepointsLabel {
     color: white;
-    text-align: center;
+    text-align: right;
 }
 
 #monstersConditionScrollbox {
@@ -70,6 +62,7 @@ div {
 
 input#chooseHeroInputView {
     color: black;
+    margin: 0 auto;
 }
 
 button {
