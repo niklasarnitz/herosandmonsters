@@ -1,9 +1,77 @@
-html,
 body {
+    background-image: url('bg.jpg');
     margin: 0;
-    padding: 0;
 }
 
+h1 {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 80px;
+    text-align: center;
+    color: white
+}
+
+h2 {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 25px;
+    text-align: center;
+    color: white
+}
+
+/*
 canvas {
     display: block;
+}
+*/
+
+div {
+    font-family: 'Source Code Pro', monospace;
+}
+
+#roundLabel {
+    color: white;
+    text-align: left;
+    margin: 0 auto;
+}
+
+#heroLifePointsLabel {
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#herosConditionScrollBox {
+    color: white;
+    text-align: left;
+    overflow-y: auto;
+}
+
+#monstersLifepointsLabel {
+    color: white;
+    text-align: center;
+}
+
+#monstersConditionScrollbox {
+    color: white;
+    text-align: right;
+    overflow-y: auto;
+}
+
+#enemyLabel {
+    color: white;
+    margin: auto;
+    text-align: center
+}
+
+#chooseHeroCaptionLabel {
+    margin: auto;
+    color: white;
+    margin-left: -30px;
+}
+
+input#chooseHeroInputView {
+    color: black;
+}
+
+button {
+    margin: 0 auto;
 }

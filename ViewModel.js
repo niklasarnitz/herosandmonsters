@@ -29,6 +29,27 @@ class ViewModel {
 
         this.heros[this.heroIndex].energy = this.heros[this.heroIndex].energy - 0.25
         this.monsters[this.monsterIndex].energy = this.monsters[this.monsterIndex].energy - 0.25
+
+        this.checkForTheDead()
+    }
+
+    checkForTheDead() {
+        for (var i = 0; i < this.monsters.length; i++) {
+            if (this.monsters[i].lifepoints <= 0) {
+                alert("Das Monster " + i + " wurde besiegt!")
+                this.monsters.splice(i, 1)
+            }
+        }
+
+        for (var j = 0; j < this.heros.length; j++) {
+            if (this.heros[j].lifepoints <= 0) {
+                alert("Dein Held " + j + " wurde besiegt!")
+                this.heros.splice(j, 1)
+            }
+        }
+
+        if (this.monsters.count == -1) alert("Du hast die Monster besiegt!")
+        if (this.heros.count == -1) alert("GAME OVER! Die Monster haben dich besiegt!")
     }
 
     getRandomMonster() {
