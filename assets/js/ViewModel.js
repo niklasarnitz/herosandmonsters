@@ -15,7 +15,11 @@ class ViewModel {
     }
 
     setHero(heroIndex) {
-        this.heroIndex = heroIndex
+	if(this.heros[heroIndex].energy <= 0) {
+		alert("Du kannst mit diesem Held nicht kämpfen! Warte bis er sich erholt hat.")
+	} else {
+		this.heroIndex = heroIndex
+	}
     }
 
     fight() {
@@ -31,6 +35,9 @@ class ViewModel {
         this.monsters[this.monsterIndex].energy = this.monsters[this.monsterIndex].energy - 0.25
 
         this.checkForTheDead()
+
+	if(this.getHerosLifepoints() <= 0) alert("GAME OVER! Die Monster haben dich besiegt!")
+	if(this.getMonstersLifepoints() <=0) alert("SUPER! Du hast die Monster besiegt und das Königreich gerettet!")
     }
 
     checkForTheDead() {
@@ -47,13 +54,10 @@ class ViewModel {
                 this.heros.splice(j, 1)
             }
         }
-
-        if (this.monsters.count == -1) alert("Du hast die Monster besiegt!")
-        if (this.heros.count == -1) alert("GAME OVER! Die Monster haben dich besiegt!")
     }
 
     getRandomMonster() {
-        this.MonsterIndex = this.dice.getRandomInt(this.Monsters.length)
+        this.monsterIndex = this.dice.getRandomInt(this.monsters.length)
     }
 
     getHerosCondition() {
@@ -65,11 +69,15 @@ class ViewModel {
     }
 
     getMonstersCondition() {
-        let string = ""
-        for (let i = 0; i < this.monsters.length; i++) {
-            string = string + i + " # " + this.monsters[i].getCondition() + "<br>"
-        }
-        return string
+	if(this.monsters.count < 1) {
+		return("")
+	} else {
+        	let string = ""
+        	for (let i = 0; i < this.monsters.length; i++) {
+        		string = string + i + " # " + this.monsters[i].getCondition() + "<br>"
+        	}
+        	return string
+	}
     }
 
     getMonstersLifepoints() {
